@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 4115096773
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0b97ad1f61970eff7fb0f8dcccd0f338
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5135e984951e34ad24195292c9139213
+HashAppended: 0
+ClassTypes:
+- Class: 221
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleSrc/AnimatorController/AnimatorController1.overrideController
+Dependencies: []

@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 3757050498
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e12620d9844d1f82e7c8e63d3526757f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c1f40038b9d5d8d82a496d5f62d54bd4
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleSrc/Prefab/OtherPrefab/ComponentPrefab/Component_Item.prefab
+Dependencies: []
