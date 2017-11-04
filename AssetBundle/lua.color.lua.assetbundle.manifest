@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3542953522
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c611f2e30fc8786731a71b42f3f6b84e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1033bf7ddfd4c6d43e7a6382c0a0a61a
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleSrc/Lua/UnityEngine/Color.lua.bytes
+Dependencies: []

@@ -31,6 +31,9 @@ public static class BuildBat
 #endif
         if (state)
         {
+            ToLuaMenu.ClearLuaFilesFromSrcPath();
+            ToLuaMenu.CopyLuaFilesToSrcPath();
+
             AssetDependenciesAnalysis analysiser = new AssetDependenciesAnalysis();
             analysiser.AnalysisAllAsset();
             //tips:Unity5.x Scripts not need to build AssetBundle

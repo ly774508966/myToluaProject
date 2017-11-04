@@ -115,12 +115,13 @@ public class AssetDependenciesAnalysis
         {
             EditorUtility.DisplayProgressBar("Start Search Independence Asset", "Search Progress", (i/allAssetPath.Count));
         
-            //图集特殊处理;
-            if (allAssetPath[i].Contains("Atlas") && Path.GetExtension(allAssetPath[i]) == ".prefab")
+            if ((allAssetPath[i].Contains("Atlas") && Path.GetExtension(allAssetPath[i]) == ".prefab")  //图集特殊处理;
+                || (allAssetPath[i].Contains("Lua") && allAssetPath[i].Contains(".lua.bytes")))         //Lua文件单独打包;
             {
                 independenceAsset[allAssetPath[i]] = allAsset[allAssetPath[i]];
                 continue;
             }
+
             if (allAssetPath[i].Contains("Shaders") && Path.GetExtension(allAssetPath[i]) == ".shader")
             {
                 allShaderAsset.Add(allAssetPath[i]);

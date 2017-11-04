@@ -84,6 +84,8 @@ public static class BuildDefine
                 return AssetType.Scripts;
             case ".ttf":
                 return AssetType.Font;
+            case ".bytes":
+                return AssetType.Lua;
         }
         return AssetType.Non;
     }
@@ -108,5 +110,6 @@ public enum AssetType
     Texture,
     Audio,
     AnimeCtrl,
-    AnimeClip
+    AnimeClip,
+    Lua    //Lua文件;
 }

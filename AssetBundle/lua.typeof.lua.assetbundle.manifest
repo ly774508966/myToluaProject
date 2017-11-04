@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1331116862
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 7fa7aca0477bb9b2c7811768c3c4fc92
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1033bf7ddfd4c6d43e7a6382c0a0a61a
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleSrc/Lua/typeof.lua.bytes
+Dependencies: []

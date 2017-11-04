@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2141605911
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 5e81869a394c07e389d92744e0485a4d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1033bf7ddfd4c6d43e7a6382c0a0a61a
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleSrc/Lua/socket/http.lua.bytes
+Dependencies: []

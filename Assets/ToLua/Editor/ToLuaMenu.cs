@@ -989,6 +989,33 @@ public static class ToLuaMenu
         Debug.Log("Copy lua files over");
     }
 
+    /// <summary>
+    /// 复制Lua文件到打包目录;
+    /// </summary>
+    public static void CopyLuaFilesToSrcPath()
+    {
+        ClearAllLuaFiles();
+        string destDir = FilePathUtil.resPath + "/Lua";
+        CopyLuaBytesFiles(LuaConst.luaDir, destDir);
+        CopyLuaBytesFiles(LuaConst.toluaDir, destDir);
+        AssetDatabase.Refresh();
+        Debug.Log("Copy lua files over");
+    }
+
+    /// <summary>
+    /// 删除打包目录下的Lua文件;
+    /// </summary>
+    public static void ClearLuaFilesFromSrcPath()
+    {
+        string path = FilePathUtil.resPath + "/Lua";
+
+        if (Directory.Exists(path))
+        {
+            Directory.Delete(path, true);
+        }
+        AssetDatabase.Refresh();
+    }
+
     [MenuItem("Lua/Copy Lua  files to Persistent", false, 52)]
     public static void CopyLuaFilesToPersistent()
     {

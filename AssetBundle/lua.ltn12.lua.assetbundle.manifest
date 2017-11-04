@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2841975647
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3ec9511c657c0019c041a76ec760eba8
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1033bf7ddfd4c6d43e7a6382c0a0a61a
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleSrc/Lua/ltn12.lua.bytes
+Dependencies: []

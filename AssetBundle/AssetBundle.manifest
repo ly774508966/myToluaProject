@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 3333291461
+CRC: 1055045532
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -65,4 +65,196 @@ AssetBundleManifest:
         Dependency_0: shader.shader.assetbundle
     Info_17:
       Name: font.fzy4jw.assetbundle
+      Dependencies: {}
+    Info_18:
+      Name: lua.event.lua.assetbundle
+      Dependencies: {}
+    Info_19:
+      Name: lua.list.lua.assetbundle
+      Dependencies: {}
+    Info_20:
+      Name: lua.ltn12.lua.assetbundle
+      Dependencies: {}
+    Info_21:
+      Name: lua.main.lua.assetbundle
+      Dependencies: {}
+    Info_22:
+      Name: lua.mime.lua.assetbundle
+      Dependencies: {}
+    Info_23:
+      Name: lua.slot.lua.assetbundle
+      Dependencies: {}
+    Info_24:
+      Name: lua.socket.lua.assetbundle
+      Dependencies: {}
+    Info_25:
+      Name: lua.tolua.lua.assetbundle
+      Dependencies: {}
+    Info_26:
+      Name: lua.typeof.lua.assetbundle
+      Dependencies: {}
+    Info_27:
+      Name: lua.util.lua.assetbundle
+      Dependencies: {}
+    Info_28:
+      Name: lua.bc.lua.assetbundle
+      Dependencies: {}
+    Info_29:
+      Name: lua.bcsave.lua.assetbundle
+      Dependencies: {}
+    Info_30:
+      Name: lua.dis_arm.lua.assetbundle
+      Dependencies: {}
+    Info_31:
+      Name: lua.dis_arm64.lua.assetbundle
+      Dependencies: {}
+    Info_32:
+      Name: lua.dis_arm64be.lua.assetbundle
+      Dependencies: {}
+    Info_33:
+      Name: lua.dis_mips.lua.assetbundle
+      Dependencies: {}
+    Info_34:
+      Name: lua.dis_mips64.lua.assetbundle
+      Dependencies: {}
+    Info_35:
+      Name: lua.dis_mips64el.lua.assetbundle
+      Dependencies: {}
+    Info_36:
+      Name: lua.dis_mipsel.lua.assetbundle
+      Dependencies: {}
+    Info_37:
+      Name: lua.dis_ppc.lua.assetbundle
+      Dependencies: {}
+    Info_38:
+      Name: lua.dis_x64.lua.assetbundle
+      Dependencies: {}
+    Info_39:
+      Name: lua.dis_x86.lua.assetbundle
+      Dependencies: {}
+    Info_40:
+      Name: lua.dump.lua.assetbundle
+      Dependencies: {}
+    Info_41:
+      Name: lua.p.lua.assetbundle
+      Dependencies: {}
+    Info_42:
+      Name: lua.v.lua.assetbundle
+      Dependencies: {}
+    Info_43:
+      Name: lua.vmdef.lua.assetbundle
+      Dependencies: {}
+    Info_44:
+      Name: lua.zone.lua.assetbundle
+      Dependencies: {}
+    Info_45:
+      Name: lua.re.lua.assetbundle
+      Dependencies: {}
+    Info_46:
+      Name: lua.functions.lua.assetbundle
+      Dependencies: {}
+    Info_47:
+      Name: lua.strict.lua.assetbundle
+      Dependencies: {}
+    Info_48:
+      Name: lua.utf8.lua.assetbundle
+      Dependencies: {}
+    Info_49:
+      Name: lua.containers.lua.assetbundle
+      Dependencies: {}
+    Info_50:
+      Name: lua.decoder.lua.assetbundle
+      Dependencies: {}
+    Info_51:
+      Name: lua.descriptor.lua.assetbundle
+      Dependencies: {}
+    Info_52:
+      Name: lua.encoder.lua.assetbundle
+      Dependencies: {}
+    Info_53:
+      Name: lua.listener.lua.assetbundle
+      Dependencies: {}
+    Info_54:
+      Name: lua.protobuf.lua.assetbundle
+      Dependencies: {}
+    Info_55:
+      Name: lua.text_format.lua.assetbundle
+      Dependencies: {}
+    Info_56:
+      Name: lua.type_checkers.lua.assetbundle
+      Dependencies: {}
+    Info_57:
+      Name: lua.wire_format.lua.assetbundle
+      Dependencies: {}
+    Info_58:
+      Name: lua.ftp.lua.assetbundle
+      Dependencies: {}
+    Info_59:
+      Name: lua.headers.lua.assetbundle
+      Dependencies: {}
+    Info_60:
+      Name: lua.http.lua.assetbundle
+      Dependencies: {}
+    Info_61:
+      Name: lua.mbox.lua.assetbundle
+      Dependencies: {}
+    Info_62:
+      Name: lua.smtp.lua.assetbundle
+      Dependencies: {}
+    Info_63:
+      Name: lua.tp.lua.assetbundle
+      Dependencies: {}
+    Info_64:
+      Name: lua.url.lua.assetbundle
+      Dependencies: {}
+    Info_65:
+      Name: lua.coroutine.lua.assetbundle
+      Dependencies: {}
+    Info_66:
+      Name: lua.timer.lua.assetbundle
+      Dependencies: {}
+    Info_67:
+      Name: lua.valuetype.lua.assetbundle
+      Dependencies: {}
+    Info_68:
+      Name: lua.bindingflags.lua.assetbundle
+      Dependencies: {}
+    Info_69:
+      Name: lua.bounds.lua.assetbundle
+      Dependencies: {}
+    Info_70:
+      Name: lua.color.lua.assetbundle
+      Dependencies: {}
+    Info_71:
+      Name: lua.layermask.lua.assetbundle
+      Dependencies: {}
+    Info_72:
+      Name: lua.mathf.lua.assetbundle
+      Dependencies: {}
+    Info_73:
+      Name: lua.plane.lua.assetbundle
+      Dependencies: {}
+    Info_74:
+      Name: lua.quaternion.lua.assetbundle
+      Dependencies: {}
+    Info_75:
+      Name: lua.ray.lua.assetbundle
+      Dependencies: {}
+    Info_76:
+      Name: lua.raycasthit.lua.assetbundle
+      Dependencies: {}
+    Info_77:
+      Name: lua.time.lua.assetbundle
+      Dependencies: {}
+    Info_78:
+      Name: lua.touch.lua.assetbundle
+      Dependencies: {}
+    Info_79:
+      Name: lua.vector2.lua.assetbundle
+      Dependencies: {}
+    Info_80:
+      Name: lua.vector3.lua.assetbundle
+      Dependencies: {}
+    Info_81:
+      Name: lua.vector4.lua.assetbundle
       Dependencies: {}
