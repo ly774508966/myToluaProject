@@ -9,4 +9,11 @@ software：Unity5.3.8/visual studio2013.
 
 progress：
 
+1、整合部分LuaFramework_NGUI：
+-----------------------
+   |-LuaBehaviour.cs
+   |-LuaLoader.cs
+   |-LuaManager.cs
+   |-LuaHelper.cs
+   |-Util.cs
 
