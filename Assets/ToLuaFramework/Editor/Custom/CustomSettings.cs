@@ -143,7 +143,25 @@ public static class CustomSettings
         _GT(typeof(RenderSettings)),                                                   
         _GT(typeof(BlendWeights)),           
         _GT(typeof(RenderTexture)),
-        _GT(typeof(Resources)),        
+        _GT(typeof(Resources)),  
+      
+        _GT(typeof(UIPanel)),
+        _GT(typeof(UILabel)),
+        _GT(typeof(UIGrid)),
+        _GT(typeof(Util)),
+        //_GT(typeof(WrapGrid)),
+        _GT(typeof(LuaHelper)),
+        //_GT(typeof(ByteBuffer)),
+        //_GT(typeof(LuaBehaviour)),
+
+        //_GT(typeof(GameManager)),
+        _GT(typeof(LuaManager)),
+        //_GT(typeof(PanelManager)),
+        //_GT(typeof(SoundManager)),
+        //_GT(typeof(TimerManager)),
+        //_GT(typeof(ThreadManager)),
+        //_GT(typeof(NetworkManager)),
+        //_GT(typeof(ResourceManager)),	
     };
 
     public static List<Type> dynamicList = new List<Type>()

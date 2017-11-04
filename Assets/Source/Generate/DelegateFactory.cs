@@ -28,6 +28,14 @@ public class DelegateFactory
 		dict.Add(typeof(UnityEngine.Application.AdvertisingIdentifierCallback), factory.UnityEngine_Application_AdvertisingIdentifierCallback);
 		dict.Add(typeof(UnityEngine.AudioClip.PCMReaderCallback), factory.UnityEngine_AudioClip_PCMReaderCallback);
 		dict.Add(typeof(UnityEngine.AudioClip.PCMSetPositionCallback), factory.UnityEngine_AudioClip_PCMSetPositionCallback);
+		dict.Add(typeof(UIPanel.OnGeometryUpdated), factory.UIPanel_OnGeometryUpdated);
+		dict.Add(typeof(UIPanel.OnClippingMoved), factory.UIPanel_OnClippingMoved);
+		dict.Add(typeof(UIWidget.OnDimensionsChanged), factory.UIWidget_OnDimensionsChanged);
+		dict.Add(typeof(UIWidget.OnPostFillCallback), factory.UIWidget_OnPostFillCallback);
+		dict.Add(typeof(UIDrawCall.OnRenderCallback), factory.UIDrawCall_OnRenderCallback);
+		dict.Add(typeof(UIWidget.HitCheck), factory.UIWidget_HitCheck);
+		dict.Add(typeof(UIGrid.OnReposition), factory.UIGrid_OnReposition);
+		dict.Add(typeof(System.Comparison<UnityEngine.Transform>), factory.System_Comparison_UnityEngine_Transform);
 
 		DelegateTraits<System.Action>.Init(factory.System_Action);
 		DelegateTraits<UnityEngine.Events.UnityAction>.Init(factory.UnityEngine_Events_UnityAction);
@@ -40,6 +48,14 @@ public class DelegateFactory
 		DelegateTraits<UnityEngine.Application.AdvertisingIdentifierCallback>.Init(factory.UnityEngine_Application_AdvertisingIdentifierCallback);
 		DelegateTraits<UnityEngine.AudioClip.PCMReaderCallback>.Init(factory.UnityEngine_AudioClip_PCMReaderCallback);
 		DelegateTraits<UnityEngine.AudioClip.PCMSetPositionCallback>.Init(factory.UnityEngine_AudioClip_PCMSetPositionCallback);
+		DelegateTraits<UIPanel.OnGeometryUpdated>.Init(factory.UIPanel_OnGeometryUpdated);
+		DelegateTraits<UIPanel.OnClippingMoved>.Init(factory.UIPanel_OnClippingMoved);
+		DelegateTraits<UIWidget.OnDimensionsChanged>.Init(factory.UIWidget_OnDimensionsChanged);
+		DelegateTraits<UIWidget.OnPostFillCallback>.Init(factory.UIWidget_OnPostFillCallback);
+		DelegateTraits<UIDrawCall.OnRenderCallback>.Init(factory.UIDrawCall_OnRenderCallback);
+		DelegateTraits<UIWidget.HitCheck>.Init(factory.UIWidget_HitCheck);
+		DelegateTraits<UIGrid.OnReposition>.Init(factory.UIGrid_OnReposition);
+		DelegateTraits<System.Comparison<UnityEngine.Transform>>.Init(factory.System_Comparison_UnityEngine_Transform);
 
 		TypeTraits<System.Action>.Init(factory.Check_System_Action);
 		TypeTraits<UnityEngine.Events.UnityAction>.Init(factory.Check_UnityEngine_Events_UnityAction);
@@ -52,6 +68,14 @@ public class DelegateFactory
 		TypeTraits<UnityEngine.Application.AdvertisingIdentifierCallback>.Init(factory.Check_UnityEngine_Application_AdvertisingIdentifierCallback);
 		TypeTraits<UnityEngine.AudioClip.PCMReaderCallback>.Init(factory.Check_UnityEngine_AudioClip_PCMReaderCallback);
 		TypeTraits<UnityEngine.AudioClip.PCMSetPositionCallback>.Init(factory.Check_UnityEngine_AudioClip_PCMSetPositionCallback);
+		TypeTraits<UIPanel.OnGeometryUpdated>.Init(factory.Check_UIPanel_OnGeometryUpdated);
+		TypeTraits<UIPanel.OnClippingMoved>.Init(factory.Check_UIPanel_OnClippingMoved);
+		TypeTraits<UIWidget.OnDimensionsChanged>.Init(factory.Check_UIWidget_OnDimensionsChanged);
+		TypeTraits<UIWidget.OnPostFillCallback>.Init(factory.Check_UIWidget_OnPostFillCallback);
+		TypeTraits<UIDrawCall.OnRenderCallback>.Init(factory.Check_UIDrawCall_OnRenderCallback);
+		TypeTraits<UIWidget.HitCheck>.Init(factory.Check_UIWidget_HitCheck);
+		TypeTraits<UIGrid.OnReposition>.Init(factory.Check_UIGrid_OnReposition);
+		TypeTraits<System.Comparison<UnityEngine.Transform>>.Init(factory.Check_System_Comparison_UnityEngine_Transform);
 
 		StackTraits<System.Action>.Push = factory.Push_System_Action;
 		StackTraits<UnityEngine.Events.UnityAction>.Push = factory.Push_UnityEngine_Events_UnityAction;
@@ -64,6 +88,14 @@ public class DelegateFactory
 		StackTraits<UnityEngine.Application.AdvertisingIdentifierCallback>.Push = factory.Push_UnityEngine_Application_AdvertisingIdentifierCallback;
 		StackTraits<UnityEngine.AudioClip.PCMReaderCallback>.Push = factory.Push_UnityEngine_AudioClip_PCMReaderCallback;
 		StackTraits<UnityEngine.AudioClip.PCMSetPositionCallback>.Push = factory.Push_UnityEngine_AudioClip_PCMSetPositionCallback;
+		StackTraits<UIPanel.OnGeometryUpdated>.Push = factory.Push_UIPanel_OnGeometryUpdated;
+		StackTraits<UIPanel.OnClippingMoved>.Push = factory.Push_UIPanel_OnClippingMoved;
+		StackTraits<UIWidget.OnDimensionsChanged>.Push = factory.Push_UIWidget_OnDimensionsChanged;
+		StackTraits<UIWidget.OnPostFillCallback>.Push = factory.Push_UIWidget_OnPostFillCallback;
+		StackTraits<UIDrawCall.OnRenderCallback>.Push = factory.Push_UIDrawCall_OnRenderCallback;
+		StackTraits<UIWidget.HitCheck>.Push = factory.Push_UIWidget_HitCheck;
+		StackTraits<UIGrid.OnReposition>.Push = factory.Push_UIGrid_OnReposition;
+		StackTraits<System.Comparison<UnityEngine.Transform>>.Push = factory.Push_System_Comparison_UnityEngine_Transform;
 	}
     
     public static Delegate CreateDelegate(Type t, LuaFunction func = null)
@@ -812,6 +844,468 @@ public class DelegateFactory
 	}
 
 	void Push_UnityEngine_AudioClip_PCMSetPositionCallback(IntPtr L, UnityEngine.AudioClip.PCMSetPositionCallback o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class UIPanel_OnGeometryUpdated_Event : LuaDelegate
+	{
+		public UIPanel_OnGeometryUpdated_Event(LuaFunction func) : base(func) { }
+		public UIPanel_OnGeometryUpdated_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public void Call()
+		{
+			func.Call();
+		}
+
+		public void CallWithSelf()
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.PCall();
+			func.EndPCall();
+		}
+	}
+
+	public UIPanel.OnGeometryUpdated UIPanel_OnGeometryUpdated(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			UIPanel.OnGeometryUpdated fn = delegate() { };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			UIPanel_OnGeometryUpdated_Event target = new UIPanel_OnGeometryUpdated_Event(func);
+			UIPanel.OnGeometryUpdated d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			UIPanel_OnGeometryUpdated_Event target = new UIPanel_OnGeometryUpdated_Event(func, self);
+			UIPanel.OnGeometryUpdated d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_UIPanel_OnGeometryUpdated(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType(typeof(UIPanel.OnGeometryUpdated), L, pos);
+	}
+
+	void Push_UIPanel_OnGeometryUpdated(IntPtr L, UIPanel.OnGeometryUpdated o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class UIPanel_OnClippingMoved_Event : LuaDelegate
+	{
+		public UIPanel_OnClippingMoved_Event(LuaFunction func) : base(func) { }
+		public UIPanel_OnClippingMoved_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public void Call(UIPanel param0)
+		{
+			func.BeginPCall();
+			func.Push(param0);
+			func.PCall();
+			func.EndPCall();
+		}
+
+		public void CallWithSelf(UIPanel param0)
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.Push(param0);
+			func.PCall();
+			func.EndPCall();
+		}
+	}
+
+	public UIPanel.OnClippingMoved UIPanel_OnClippingMoved(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			UIPanel.OnClippingMoved fn = delegate(UIPanel param0) { };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			UIPanel_OnClippingMoved_Event target = new UIPanel_OnClippingMoved_Event(func);
+			UIPanel.OnClippingMoved d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			UIPanel_OnClippingMoved_Event target = new UIPanel_OnClippingMoved_Event(func, self);
+			UIPanel.OnClippingMoved d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_UIPanel_OnClippingMoved(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType(typeof(UIPanel.OnClippingMoved), L, pos);
+	}
+
+	void Push_UIPanel_OnClippingMoved(IntPtr L, UIPanel.OnClippingMoved o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class UIWidget_OnDimensionsChanged_Event : LuaDelegate
+	{
+		public UIWidget_OnDimensionsChanged_Event(LuaFunction func) : base(func) { }
+		public UIWidget_OnDimensionsChanged_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public void Call()
+		{
+			func.Call();
+		}
+
+		public void CallWithSelf()
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.PCall();
+			func.EndPCall();
+		}
+	}
+
+	public UIWidget.OnDimensionsChanged UIWidget_OnDimensionsChanged(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			UIWidget.OnDimensionsChanged fn = delegate() { };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			UIWidget_OnDimensionsChanged_Event target = new UIWidget_OnDimensionsChanged_Event(func);
+			UIWidget.OnDimensionsChanged d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			UIWidget_OnDimensionsChanged_Event target = new UIWidget_OnDimensionsChanged_Event(func, self);
+			UIWidget.OnDimensionsChanged d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_UIWidget_OnDimensionsChanged(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType(typeof(UIWidget.OnDimensionsChanged), L, pos);
+	}
+
+	void Push_UIWidget_OnDimensionsChanged(IntPtr L, UIWidget.OnDimensionsChanged o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class UIWidget_OnPostFillCallback_Event : LuaDelegate
+	{
+		public UIWidget_OnPostFillCallback_Event(LuaFunction func) : base(func) { }
+		public UIWidget_OnPostFillCallback_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public void Call(UIWidget param0, int param1, BetterList<UnityEngine.Vector3> param2, BetterList<UnityEngine.Vector2> param3, BetterList<UnityEngine.Color32> param4)
+		{
+			func.BeginPCall();
+			func.Push(param0);
+			func.Push(param1);
+			func.PushObject(param2);
+			func.PushObject(param3);
+			func.PushObject(param4);
+			func.PCall();
+			func.EndPCall();
+		}
+
+		public void CallWithSelf(UIWidget param0, int param1, BetterList<UnityEngine.Vector3> param2, BetterList<UnityEngine.Vector2> param3, BetterList<UnityEngine.Color32> param4)
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.Push(param0);
+			func.Push(param1);
+			func.PushObject(param2);
+			func.PushObject(param3);
+			func.PushObject(param4);
+			func.PCall();
+			func.EndPCall();
+		}
+	}
+
+	public UIWidget.OnPostFillCallback UIWidget_OnPostFillCallback(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			UIWidget.OnPostFillCallback fn = delegate(UIWidget param0, int param1, BetterList<UnityEngine.Vector3> param2, BetterList<UnityEngine.Vector2> param3, BetterList<UnityEngine.Color32> param4) { };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			UIWidget_OnPostFillCallback_Event target = new UIWidget_OnPostFillCallback_Event(func);
+			UIWidget.OnPostFillCallback d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			UIWidget_OnPostFillCallback_Event target = new UIWidget_OnPostFillCallback_Event(func, self);
+			UIWidget.OnPostFillCallback d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_UIWidget_OnPostFillCallback(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType(typeof(UIWidget.OnPostFillCallback), L, pos);
+	}
+
+	void Push_UIWidget_OnPostFillCallback(IntPtr L, UIWidget.OnPostFillCallback o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class UIDrawCall_OnRenderCallback_Event : LuaDelegate
+	{
+		public UIDrawCall_OnRenderCallback_Event(LuaFunction func) : base(func) { }
+		public UIDrawCall_OnRenderCallback_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public void Call(UnityEngine.Material param0)
+		{
+			func.BeginPCall();
+			func.Push(param0);
+			func.PCall();
+			func.EndPCall();
+		}
+
+		public void CallWithSelf(UnityEngine.Material param0)
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.Push(param0);
+			func.PCall();
+			func.EndPCall();
+		}
+	}
+
+	public UIDrawCall.OnRenderCallback UIDrawCall_OnRenderCallback(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			UIDrawCall.OnRenderCallback fn = delegate(UnityEngine.Material param0) { };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			UIDrawCall_OnRenderCallback_Event target = new UIDrawCall_OnRenderCallback_Event(func);
+			UIDrawCall.OnRenderCallback d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			UIDrawCall_OnRenderCallback_Event target = new UIDrawCall_OnRenderCallback_Event(func, self);
+			UIDrawCall.OnRenderCallback d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_UIDrawCall_OnRenderCallback(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType(typeof(UIDrawCall.OnRenderCallback), L, pos);
+	}
+
+	void Push_UIDrawCall_OnRenderCallback(IntPtr L, UIDrawCall.OnRenderCallback o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class UIWidget_HitCheck_Event : LuaDelegate
+	{
+		public UIWidget_HitCheck_Event(LuaFunction func) : base(func) { }
+		public UIWidget_HitCheck_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public bool Call(UnityEngine.Vector3 param0)
+		{
+			func.BeginPCall();
+			func.Push(param0);
+			func.PCall();
+			bool ret = func.CheckBoolean();
+			func.EndPCall();
+			return ret;
+		}
+
+		public bool CallWithSelf(UnityEngine.Vector3 param0)
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.Push(param0);
+			func.PCall();
+			bool ret = func.CheckBoolean();
+			func.EndPCall();
+			return ret;
+		}
+	}
+
+	public UIWidget.HitCheck UIWidget_HitCheck(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			UIWidget.HitCheck fn = delegate(UnityEngine.Vector3 param0) { return false; };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			UIWidget_HitCheck_Event target = new UIWidget_HitCheck_Event(func);
+			UIWidget.HitCheck d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			UIWidget_HitCheck_Event target = new UIWidget_HitCheck_Event(func, self);
+			UIWidget.HitCheck d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_UIWidget_HitCheck(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType(typeof(UIWidget.HitCheck), L, pos);
+	}
+
+	void Push_UIWidget_HitCheck(IntPtr L, UIWidget.HitCheck o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class UIGrid_OnReposition_Event : LuaDelegate
+	{
+		public UIGrid_OnReposition_Event(LuaFunction func) : base(func) { }
+		public UIGrid_OnReposition_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public void Call()
+		{
+			func.Call();
+		}
+
+		public void CallWithSelf()
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.PCall();
+			func.EndPCall();
+		}
+	}
+
+	public UIGrid.OnReposition UIGrid_OnReposition(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			UIGrid.OnReposition fn = delegate() { };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			UIGrid_OnReposition_Event target = new UIGrid_OnReposition_Event(func);
+			UIGrid.OnReposition d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			UIGrid_OnReposition_Event target = new UIGrid_OnReposition_Event(func, self);
+			UIGrid.OnReposition d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_UIGrid_OnReposition(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType(typeof(UIGrid.OnReposition), L, pos);
+	}
+
+	void Push_UIGrid_OnReposition(IntPtr L, UIGrid.OnReposition o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class System_Comparison_UnityEngine_Transform_Event : LuaDelegate
+	{
+		public System_Comparison_UnityEngine_Transform_Event(LuaFunction func) : base(func) { }
+		public System_Comparison_UnityEngine_Transform_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public int Call(UnityEngine.Transform param0, UnityEngine.Transform param1)
+		{
+			func.BeginPCall();
+			func.Push(param0);
+			func.Push(param1);
+			func.PCall();
+			int ret = (int)func.CheckNumber();
+			func.EndPCall();
+			return ret;
+		}
+
+		public int CallWithSelf(UnityEngine.Transform param0, UnityEngine.Transform param1)
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.Push(param0);
+			func.Push(param1);
+			func.PCall();
+			int ret = (int)func.CheckNumber();
+			func.EndPCall();
+			return ret;
+		}
+	}
+
+	public System.Comparison<UnityEngine.Transform> System_Comparison_UnityEngine_Transform(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			System.Comparison<UnityEngine.Transform> fn = delegate(UnityEngine.Transform param0, UnityEngine.Transform param1) { return 0; };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			System_Comparison_UnityEngine_Transform_Event target = new System_Comparison_UnityEngine_Transform_Event(func);
+			System.Comparison<UnityEngine.Transform> d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			System_Comparison_UnityEngine_Transform_Event target = new System_Comparison_UnityEngine_Transform_Event(func, self);
+			System.Comparison<UnityEngine.Transform> d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_System_Comparison_UnityEngine_Transform(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType(typeof(System.Comparison<UnityEngine.Transform>), L, pos);
+	}
+
+	void Push_System_Comparison_UnityEngine_Transform(IntPtr L, System.Comparison<UnityEngine.Transform> o)
 	{
 		ToLua.Push(L, o);
 	}

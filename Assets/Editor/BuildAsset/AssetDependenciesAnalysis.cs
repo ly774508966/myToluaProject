@@ -48,6 +48,11 @@ public class AssetDependenciesAnalysis
     public HashSet<string> allShaderAsset = new HashSet<string>();
 
     /// <summary>
+    /// 全部引用的Lua文件资源;
+    /// </summary>
+    public HashSet<string> allLuaAsset = new HashSet<string>();
+
+    /// <summary>
     /// 分析全部资源依赖关系;
     /// </summary>
     public void AnalysisAllAsset()
@@ -84,10 +89,16 @@ public class AssetDependenciesAnalysis
                 {
                     continue;
                 }
-                //依赖Shader直接添加到脚本队列;
+                //依赖Shader直接添加到Shader队列;
                 if (BuildDefine.GetAssetType(tempPath)== AssetType.Shader)
                 {
                     allShaderAsset.Add(tempPath);
+                    continue;
+                }
+                //Lua文件直接添加到Lua队列;
+                if (BuildDefine.GetAssetType(tempPath) == AssetType.Lua)
+                {
+                    allLuaAsset.Add(tempPath);
                     continue;
                 }
                 if (tempPath.Contains(FilePathUtil.resPath))
@@ -115,16 +126,19 @@ public class AssetDependenciesAnalysis
         {
             EditorUtility.DisplayProgressBar("Start Search Independence Asset", "Search Progress", (i/allAssetPath.Count));
         
-            if ((allAssetPath[i].Contains("Atlas") && Path.GetExtension(allAssetPath[i]) == ".prefab")  //图集特殊处理;
-                || (allAssetPath[i].Contains("Lua") && allAssetPath[i].Contains(".lua.bytes")))         //Lua文件单独打包;
+            if(allAssetPath[i].Contains("Atlas") && Path.GetExtension(allAssetPath[i]) == ".prefab")  //图集特殊处理;
             {
                 independenceAsset[allAssetPath[i]] = allAsset[allAssetPath[i]];
                 continue;
             }
-
             if (allAssetPath[i].Contains("Shaders") && Path.GetExtension(allAssetPath[i]) == ".shader")
             {
                 allShaderAsset.Add(allAssetPath[i]);
+                continue;
+            }
+            if (allAssetPath[i].Contains("Lua") && Path.GetExtension(allAssetPath[i]) == ".bytes")
+            {
+                allLuaAsset.Add(allAssetPath[i]);
                 continue;
             }
             if(allAsset[allAssetPath[i]].parentDependentAssets.Count==0||//没有被依赖的资源;
@@ -167,6 +181,19 @@ public class AssetDependenciesAnalysis
             if (importer != null)
             {
                 importer.assetBundleName = FilePathUtil.GetAssetBundleFileName(AssetType.Shader, "Shader");
+                AssetDatabase.ImportAsset(tempPath);
+            }
+        }
+        index = 0;
+        //设置Lua文件 AssetBundle Name;
+        foreach (string tempPath in allLuaAsset)
+        {
+            index++;
+            EditorUtility.DisplayProgressBar("Set Asset AssetBundle Name", "AssetBundle Name Setting Progress", (index / allShaderAsset.Count));
+            AssetImporter importer = AssetImporter.GetAtPath(tempPath);
+            if (importer != null)
+            {
+                importer.assetBundleName = FilePathUtil.GetAssetBundleFileName(AssetType.Lua, "Lua");
                 AssetDatabase.ImportAsset(tempPath);
             }
         }
