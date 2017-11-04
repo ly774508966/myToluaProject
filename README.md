@@ -7,13 +7,14 @@ software：Unity5.3.8/visual studio2013.
 
 [②myAssetBundleTools](https://github.com/HushengStudent/myAssetBundleTools)
 
-progress：
+progress:
 
 1、整合部分LuaFramework_NGUI：
------------------------
-   |-LuaBehaviour.cs
-   |-LuaLoader.cs
-   |-LuaManager.cs
-   |-LuaHelper.cs
-   |-Util.cs
+①LuaBehaviour.cs
+②LuaLoader.cs
+③LuaManager.cs
+④LuaHelper.cs
+⑤Util.cs
 
+2、整合AssetBundle打包工具：
+[myAssetBundleTools](https://github.com/HushengStudent/myAssetBundleTools)
