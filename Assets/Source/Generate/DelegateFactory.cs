@@ -36,6 +36,8 @@ public class DelegateFactory
 		dict.Add(typeof(UIWidget.HitCheck), factory.UIWidget_HitCheck);
 		dict.Add(typeof(UIGrid.OnReposition), factory.UIGrid_OnReposition);
 		dict.Add(typeof(System.Comparison<UnityEngine.Transform>), factory.System_Comparison_UnityEngine_Transform);
+		dict.Add(typeof(System.Action<UnityEngine.Object>), factory.System_Action_UnityEngine_Object);
+		dict.Add(typeof(System.Action<float>), factory.System_Action_float);
 
 		DelegateTraits<System.Action>.Init(factory.System_Action);
 		DelegateTraits<UnityEngine.Events.UnityAction>.Init(factory.UnityEngine_Events_UnityAction);
@@ -56,6 +58,8 @@ public class DelegateFactory
 		DelegateTraits<UIWidget.HitCheck>.Init(factory.UIWidget_HitCheck);
 		DelegateTraits<UIGrid.OnReposition>.Init(factory.UIGrid_OnReposition);
 		DelegateTraits<System.Comparison<UnityEngine.Transform>>.Init(factory.System_Comparison_UnityEngine_Transform);
+		DelegateTraits<System.Action<UnityEngine.Object>>.Init(factory.System_Action_UnityEngine_Object);
+		DelegateTraits<System.Action<float>>.Init(factory.System_Action_float);
 
 		TypeTraits<System.Action>.Init(factory.Check_System_Action);
 		TypeTraits<UnityEngine.Events.UnityAction>.Init(factory.Check_UnityEngine_Events_UnityAction);
@@ -76,6 +80,8 @@ public class DelegateFactory
 		TypeTraits<UIWidget.HitCheck>.Init(factory.Check_UIWidget_HitCheck);
 		TypeTraits<UIGrid.OnReposition>.Init(factory.Check_UIGrid_OnReposition);
 		TypeTraits<System.Comparison<UnityEngine.Transform>>.Init(factory.Check_System_Comparison_UnityEngine_Transform);
+		TypeTraits<System.Action<UnityEngine.Object>>.Init(factory.Check_System_Action_UnityEngine_Object);
+		TypeTraits<System.Action<float>>.Init(factory.Check_System_Action_float);
 
 		StackTraits<System.Action>.Push = factory.Push_System_Action;
 		StackTraits<UnityEngine.Events.UnityAction>.Push = factory.Push_UnityEngine_Events_UnityAction;
@@ -96,6 +102,8 @@ public class DelegateFactory
 		StackTraits<UIWidget.HitCheck>.Push = factory.Push_UIWidget_HitCheck;
 		StackTraits<UIGrid.OnReposition>.Push = factory.Push_UIGrid_OnReposition;
 		StackTraits<System.Comparison<UnityEngine.Transform>>.Push = factory.Push_System_Comparison_UnityEngine_Transform;
+		StackTraits<System.Action<UnityEngine.Object>>.Push = factory.Push_System_Action_UnityEngine_Object;
+		StackTraits<System.Action<float>>.Push = factory.Push_System_Action_float;
 	}
     
     public static Delegate CreateDelegate(Type t, LuaFunction func = null)
@@ -1306,6 +1314,120 @@ public class DelegateFactory
 	}
 
 	void Push_System_Comparison_UnityEngine_Transform(IntPtr L, System.Comparison<UnityEngine.Transform> o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class System_Action_UnityEngine_Object_Event : LuaDelegate
+	{
+		public System_Action_UnityEngine_Object_Event(LuaFunction func) : base(func) { }
+		public System_Action_UnityEngine_Object_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public void Call(UnityEngine.Object param0)
+		{
+			func.BeginPCall();
+			func.Push(param0);
+			func.PCall();
+			func.EndPCall();
+		}
+
+		public void CallWithSelf(UnityEngine.Object param0)
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.Push(param0);
+			func.PCall();
+			func.EndPCall();
+		}
+	}
+
+	public System.Action<UnityEngine.Object> System_Action_UnityEngine_Object(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			System.Action<UnityEngine.Object> fn = delegate(UnityEngine.Object param0) { };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			System_Action_UnityEngine_Object_Event target = new System_Action_UnityEngine_Object_Event(func);
+			System.Action<UnityEngine.Object> d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			System_Action_UnityEngine_Object_Event target = new System_Action_UnityEngine_Object_Event(func, self);
+			System.Action<UnityEngine.Object> d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_System_Action_UnityEngine_Object(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType(typeof(System.Action<UnityEngine.Object>), L, pos);
+	}
+
+	void Push_System_Action_UnityEngine_Object(IntPtr L, System.Action<UnityEngine.Object> o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class System_Action_float_Event : LuaDelegate
+	{
+		public System_Action_float_Event(LuaFunction func) : base(func) { }
+		public System_Action_float_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public void Call(float param0)
+		{
+			func.BeginPCall();
+			func.Push(param0);
+			func.PCall();
+			func.EndPCall();
+		}
+
+		public void CallWithSelf(float param0)
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.Push(param0);
+			func.PCall();
+			func.EndPCall();
+		}
+	}
+
+	public System.Action<float> System_Action_float(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			System.Action<float> fn = delegate(float param0) { };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			System_Action_float_Event target = new System_Action_float_Event(func);
+			System.Action<float> d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			System_Action_float_Event target = new System_Action_float_Event(func, self);
+			System.Action<float> d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_System_Action_float(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType(typeof(System.Action<float>), L, pos);
+	}
+
+	void Push_System_Action_float(IntPtr L, System.Action<float> o)
 	{
 		ToLua.Push(L, o);
 	}
