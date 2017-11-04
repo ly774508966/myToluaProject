@@ -31,6 +31,7 @@ public class LuaResLoader : LuaFileUtils
     public LuaResLoader()
     {
         instance = this;
+        beZip = false;
     }
 
     public override byte[] ReadFile(string fileName)
