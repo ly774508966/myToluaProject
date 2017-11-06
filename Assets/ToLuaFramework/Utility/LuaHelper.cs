@@ -28,7 +28,8 @@ public static class LuaHelper
     /// <summary>
     /// 面板管理器;
     /// </summary>
-    //public static PanelManager GetPanelManager() {
+    //public static PanelManager GetPanelManager()
+    //{
     //    return AppFacade.Instance.GetManager<PanelManager>(ManagerName.Panel);
     //}
 
@@ -38,6 +39,11 @@ public static class LuaHelper
     public static ResourceMgr GetResManager()
     {
         return ResourceMgr.Instance;
+    }
+
+    public static SceneMgr GetSceneManager()
+    {
+        return SceneMgr.Instance;
     }
 
     /// <summary>

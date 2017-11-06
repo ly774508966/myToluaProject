@@ -8,6 +8,7 @@ public class SceneMgrWrap
 	{
 		L.BeginClass(typeof(SceneMgr), typeof(MonoSingletonMgr<SceneMgr>));
 		L.RegFunction("ShowScene", ShowScene);
+		L.RegFunction("Test", Test);
 		L.RegFunction("__eq", op_Equality);
 		L.RegFunction("__tostring", ToLua.op_ToString);
 		L.EndClass();
@@ -18,10 +19,41 @@ public class SceneMgrWrap
 	{
 		try
 		{
-			ToLua.CheckArgsCount(L, 2);
+			int count = LuaDLL.lua_gettop(L);
+
+			if (count == 2 && TypeChecker.CheckTypes<GameSceneEnum>(L, 2))
+			{
+				SceneMgr obj = (SceneMgr)ToLua.CheckObject<SceneMgr>(L, 1);
+				GameSceneEnum arg0 = (GameSceneEnum)ToLua.ToObject(L, 2);
+				obj.ShowScene(arg0);
+				return 0;
+			}
+			else if (count == 2 && TypeChecker.CheckTypes<int>(L, 2))
+			{
+				SceneMgr obj = (SceneMgr)ToLua.CheckObject<SceneMgr>(L, 1);
+				int arg0 = (int)LuaDLL.lua_tonumber(L, 2);
+				obj.ShowScene(arg0);
+				return 0;
+			}
+			else
+			{
+				return LuaDLL.luaL_throw(L, "invalid arguments to method: SceneMgr.ShowScene");
+			}
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int Test(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 1);
 			SceneMgr obj = (SceneMgr)ToLua.CheckObject<SceneMgr>(L, 1);
-			GameSceneEnum arg0 = (GameSceneEnum)ToLua.CheckObject(L, 2, typeof(GameSceneEnum));
-			obj.ShowScene(arg0);
+			obj.Test();
 			return 0;
 		}
 		catch (Exception e)

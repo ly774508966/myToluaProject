@@ -42,6 +42,16 @@ public class SceneMgr : MonoSingletonMgr<SceneMgr>
     /// </summary>
     private RecycleAssetContainer container = new RecycleAssetContainer();
 
+    public void ShowScene(int index)
+    {
+        ShowScene((GameSceneEnum)index);
+    }
+
+    public void Test()
+    {
+        Debug.LogWarning("=====>Lua Call C# success!");
+    }
+
     public void ShowScene(GameSceneEnum scene)
     {
         string sceneName = scene.ToString();
