@@ -708,6 +708,8 @@ namespace LuaInterface
                 throw new LuaException(fullPath + " is not a full path");
             }
 
+            Debug.LogWarning("=====>" + fullPath);
+
             fullPath = ToPackagePath(fullPath);
             LuaFileUtils.Instance.AddSearchPath(fullPath);        
         }

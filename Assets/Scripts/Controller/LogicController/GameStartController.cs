@@ -31,6 +31,7 @@ public class GameStartController : MonoBehaviour
     private void GameInit()
     {
         ResourceMgr.Instance.InitNecessaryAsset();
+        LuaManager.Instance.InitStart();
         SceneMgr.Instance.ShowScene(GameSceneEnum.Scene_One);//进入游戏默认打开Scene_One;
     }
 

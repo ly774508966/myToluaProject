@@ -23,7 +23,7 @@ public class LuaManager : MonoSingletonMgr<LuaManager>
 
     public void InitStart()
     {
-        InitLuaPath();
+        //InitLuaPath();   //初始化Lua代码加载路径,注释后只支持从AssetBundle加载Lua代码;
         InitLuaBundle();
         this.lua.Start();    //启动LUAVM;
         this.StartMain();
@@ -63,8 +63,8 @@ public class LuaManager : MonoSingletonMgr<LuaManager>
     void OpenLibs()
     {
         lua.OpenLibs(LuaDLL.luaopen_pb);
-        lua.OpenLibs(LuaDLL.luaopen_sproto_core);
-        lua.OpenLibs(LuaDLL.luaopen_protobuf_c);
+        //lua.OpenLibs(LuaDLL.luaopen_sproto_core);
+        //lua.OpenLibs(LuaDLL.luaopen_protobuf_c);
         lua.OpenLibs(LuaDLL.luaopen_lpeg);
         lua.OpenLibs(LuaDLL.luaopen_bit);
         lua.OpenLibs(LuaDLL.luaopen_socket_core);
@@ -77,7 +77,8 @@ public class LuaManager : MonoSingletonMgr<LuaManager>
     /// </summary>
     void InitLuaPath()
     {
-        lua.AddSearchPath(FilePathUtil.GetAssetBundlePath(AssetType.Lua, "Lua"));
+        //只支持从AssetBundle加载Lua代码;
+        //lua.AddSearchPath(FilePathUtil.assetBundlePath);
     }
 
     /// <summary>

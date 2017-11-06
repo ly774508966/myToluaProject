@@ -199,11 +199,16 @@ namespace LuaInterface
         /*
         ** third party library
         */
-        [DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int luaopen_sproto_core(IntPtr L);
+        //        LuaFramework中的tolua_runtime底层库是在tolua_runtime的基础上增添的一些其他第三方库的功能，这些tolua#作为一个最单纯的插件并没有提供，框架用到了pbc、sproto、pbc等功能，因此集成进来了。
 
-        [DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int luaopen_protobuf_c(IntPtr L);
+        //下载地址：https://github.com/jarjin/tolua_rumtime
+        //原版地址：https://github.com/topameng/tolua_runtime  
+
+        //[DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]
+        //public static extern int luaopen_sproto_core(IntPtr L);
+
+        //[DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]
+        //public static extern int luaopen_protobuf_c(IntPtr L);
 
         [DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]
         public static extern int luaopen_pb(IntPtr L);

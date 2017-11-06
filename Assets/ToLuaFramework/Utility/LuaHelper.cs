@@ -35,9 +35,10 @@ public static class LuaHelper
     /// <summary>
     /// 资源管理器;
     /// </summary>
-    //public static ResourceManager GetResManager() {
-    //    return AppFacade.Instance.GetManager<ResourceManager>(ManagerName.Resource);
-    //}
+    public static ResourceMgr GetResManager()
+    {
+        return ResourceMgr.Instance;
+    }
 
     /// <summary>
     /// 网络管理器;

@@ -24,7 +24,7 @@ public class LuaLoader : LuaFileUtils
         AssetBundle bundle = AssetBundleMgr.Instance.LoadAssetBundleSync(AssetType.Lua, "Lua");
         if (bundle != null)
         {
-            base.AddSearchBundle("Lua", bundle);
+            base.AddSearchBundle("lua", bundle);
         }
     }
 

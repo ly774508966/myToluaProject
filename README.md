@@ -24,3 +24,5 @@ progress:
 2、整合AssetBundle打包工具：
 
 [myAssetBundleTools](https://github.com/HushengStudent/myAssetBundleTools)
+
+新增Lua代码打包。
