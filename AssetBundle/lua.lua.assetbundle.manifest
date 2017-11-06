@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 653020359
+CRC: 648691745
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 9255504ba6e57c0b9f135bdaaed307c4
+    Hash: 699711a72333d8b446560e87aa8fffb2
   TypeTreeHash:
     serializedVersion: 2
     Hash: 1033bf7ddfd4c6d43e7a6382c0a0a61a
@@ -14,17 +14,11 @@ ClassTypes:
 Assets:
 - Assets/AssetBundleSrc/Lua/tolua.lua.bytes
 - Assets/AssetBundleSrc/Lua/list.lua.bytes
-- Assets/AssetBundleSrc/Lua/3rd/cjson/util.lua.bytes
 - Assets/AssetBundleSrc/Lua/protobuf/listener.lua.bytes
 - Assets/AssetBundleSrc/Lua/Main.lua.bytes
-- Assets/AssetBundleSrc/Lua/Logic/LuaClass.lua.bytes
-- Assets/AssetBundleSrc/Lua/3rd/cjson/lua2json.lua.bytes
 - Assets/AssetBundleSrc/Lua/protobuf/containers.lua.bytes
-- Assets/AssetBundleSrc/Lua/Common/functions.lua.bytes
-- Assets/AssetBundleSrc/Lua/Common/define.lua.bytes
 - Assets/AssetBundleSrc/Lua/jit/dis_mips.lua.bytes
 - Assets/AssetBundleSrc/Lua/typeof.lua.bytes
-- Assets/AssetBundleSrc/Lua/Common/protocal.lua.bytes
 - Assets/AssetBundleSrc/Lua/UnityEngine/Touch.lua.bytes
 - Assets/AssetBundleSrc/Lua/jit/dis_mips64.lua.bytes
 - Assets/AssetBundleSrc/Lua/UnityEngine/Quaternion.lua.bytes
@@ -32,39 +26,31 @@ Assets:
 - Assets/AssetBundleSrc/Lua/jit/dis_x86.lua.bytes
 - Assets/AssetBundleSrc/Lua/UnityEngine/Time.lua.bytes
 - Assets/AssetBundleSrc/Lua/jit/dis_mips64el.lua.bytes
-- Assets/AssetBundleSrc/Lua/Logic/Network.lua.bytes
-- Assets/AssetBundleSrc/Lua/Logic/CtrlManager.lua.bytes
 - Assets/AssetBundleSrc/Lua/UnityEngine/Plane.lua.bytes
 - Assets/AssetBundleSrc/Lua/jit/dis_x64.lua.bytes
 - Assets/AssetBundleSrc/Lua/jit/dis_arm.lua.bytes
 - Assets/AssetBundleSrc/Lua/UnityEngine/RaycastHit.lua.bytes
 - Assets/AssetBundleSrc/Lua/event.lua.bytes
 - Assets/AssetBundleSrc/Lua/socket/ftp.lua.bytes
-- Assets/AssetBundleSrc/Lua/Controller/PromptCtrl.lua.bytes
 - Assets/AssetBundleSrc/Lua/jit/dis_arm64.lua.bytes
 - Assets/AssetBundleSrc/Lua/jit/zone.lua.bytes
 - Assets/AssetBundleSrc/Lua/mime.lua.bytes
 - Assets/AssetBundleSrc/Lua/jit/vmdef.lua.bytes
 - Assets/AssetBundleSrc/Lua/protobuf/wire_format.lua.bytes
 - Assets/AssetBundleSrc/Lua/System/Timer.lua.bytes
-- Assets/AssetBundleSrc/Lua/Controller/MessageCtrl.lua.bytes
-- Assets/AssetBundleSrc/Lua/Logic/Game.lua.bytes
 - Assets/AssetBundleSrc/Lua/socket/smtp.lua.bytes
 - Assets/AssetBundleSrc/Lua/socket/http.lua.bytes
 - Assets/AssetBundleSrc/Lua/jit/dump.lua.bytes
 - Assets/AssetBundleSrc/Lua/UnityEngine/Vector2.lua.bytes
 - Assets/AssetBundleSrc/Lua/UnityEngine/Color.lua.bytes
 - Assets/AssetBundleSrc/Lua/slot.lua.bytes
-- Assets/AssetBundleSrc/Lua/3rd/cjson/test.lua.bytes
 - Assets/AssetBundleSrc/Lua/protobuf/text_format.lua.bytes
 - Assets/AssetBundleSrc/Lua/misc/functions.lua.bytes
 - Assets/AssetBundleSrc/Lua/UnityEngine/Ray.lua.bytes
 - Assets/AssetBundleSrc/Lua/ltn12.lua.bytes
 - Assets/AssetBundleSrc/Lua/socket/url.lua.bytes
-- Assets/AssetBundleSrc/Lua/3rd/cjson/json2lua.lua.bytes
 - Assets/AssetBundleSrc/Lua/protobuf/encoder.lua.bytes
 - Assets/AssetBundleSrc/Lua/System/coroutine.lua.bytes
-- Assets/AssetBundleSrc/Lua/View/MessagePanel.lua.bytes
 - Assets/AssetBundleSrc/Lua/jit/dis_ppc.lua.bytes
 - Assets/AssetBundleSrc/Lua/cjson/util.lua.bytes
 - Assets/AssetBundleSrc/Lua/protobuf/protobuf.lua.bytes
@@ -79,7 +65,6 @@ Assets:
 - Assets/AssetBundleSrc/Lua/protobuf/decoder.lua.bytes
 - Assets/AssetBundleSrc/Lua/jit/dis_arm64be.lua.bytes
 - Assets/AssetBundleSrc/Lua/misc/strict.lua.bytes
-- Assets/AssetBundleSrc/Lua/View/PromptPanel.lua.bytes
 - Assets/AssetBundleSrc/Lua/UnityEngine/LayerMask.lua.bytes
 - Assets/AssetBundleSrc/Lua/UnityEngine/Mathf.lua.bytes
 - Assets/AssetBundleSrc/Lua/socket/headers.lua.bytes

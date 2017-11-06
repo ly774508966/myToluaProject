@@ -32,9 +32,9 @@ public class GameStartController : MonoBehaviour
     {
         ResourceMgr.Instance.InitNecessaryAsset();
         LuaManager.Instance.InitStart();
-        //SceneMgr.Instance.ShowScene(GameSceneEnum.Scene_One);//进入游戏默认打开Scene_One;
-        //LuaManager.Instance.DoFile("Main.lua");            
+        SceneMgr.Instance.ShowScene(GameSceneEnum.Scene_One);//进入游戏默认打开Scene_One;
     }
 
     #endregion
+
 }

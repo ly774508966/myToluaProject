@@ -161,8 +161,8 @@ public static class CustomSettings
         //_GT(typeof(TimerManager)),
         //_GT(typeof(ThreadManager)),
         //_GT(typeof(NetworkManager)),
-        _GT(typeof(ResourceMgr)),	
-        _GT(typeof(SceneMgr)),
+        _GT(typeof(ResourceMgr)),
+	    _GT(typeof(SceneMgr)),
     };
 
     public static List<Type> dynamicList = new List<Type>()
