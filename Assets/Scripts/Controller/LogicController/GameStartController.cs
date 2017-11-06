@@ -37,5 +37,4 @@ public class GameStartController : MonoBehaviour
     }
 
     #endregion
-
 }

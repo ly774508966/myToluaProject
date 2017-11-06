@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3804313952
+CRC: 653020359
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 45c2c3e0ecc282941a64f91583766060
+    Hash: 9255504ba6e57c0b9f135bdaaed307c4
   TypeTreeHash:
     serializedVersion: 2
     Hash: 1033bf7ddfd4c6d43e7a6382c0a0a61a
@@ -32,6 +32,7 @@ Assets:
 - Assets/AssetBundleSrc/Lua/jit/dis_x86.lua.bytes
 - Assets/AssetBundleSrc/Lua/UnityEngine/Time.lua.bytes
 - Assets/AssetBundleSrc/Lua/jit/dis_mips64el.lua.bytes
+- Assets/AssetBundleSrc/Lua/Logic/Network.lua.bytes
 - Assets/AssetBundleSrc/Lua/Logic/CtrlManager.lua.bytes
 - Assets/AssetBundleSrc/Lua/UnityEngine/Plane.lua.bytes
 - Assets/AssetBundleSrc/Lua/jit/dis_x64.lua.bytes
