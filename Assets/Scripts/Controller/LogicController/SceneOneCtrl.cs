@@ -17,7 +17,8 @@ public class SceneOneCtrl : MonoBehaviour {
     {
         if (GUILayout.Button("Jump to Scene_Two", GUILayout.Width(200f), GUILayout.Height(50f)))
         {
-            SceneMgr.Instance.ShowScene(GameSceneEnum.Scene_Two);
+            LuaManager.Instance.DoFile("GameStart");
+            Util.CallMethod("GameStart", "OpenScene_Two");
         }
     }
 }

@@ -16,6 +16,8 @@ using UnityEditor;
 using System;
 using System.Diagnostics;
 using Debug = UnityEngine.Debug;
+using System.IO;
+using System.Collections.Generic;
 
 public static class BuildBat
 {
@@ -39,6 +41,42 @@ public static class BuildBat
             //tips:Unity5.x Scripts not need to build AssetBundle
             //analysiser.BuildAllScripts();
         }
+        BuildAssetBundle();
+    }
+
+    [MenuItem("AssetBundleTools/Build Lua")]
+    public static void BuildLua()
+    {
+
+        ToLuaMenu.ClearLuaFilesFromSrcPath();
+        ToLuaMenu.CopyLuaFilesToSrcPath();
+
+        string[] allPath = Directory.GetFiles(FilePathUtil.resPath+"Lua/", "*.*", SearchOption.AllDirectories);
+
+        //剔除.meta文件;
+        List<string> allLuaAsset = new List<string>();
+        foreach (string tempPath in allPath)
+        {
+            string path = tempPath.Replace("\\", "/");
+            if (Path.GetExtension(path) == ".meta") continue;
+            allLuaAsset.Add(path);
+        }
+        int index = 0;
+        foreach (string tempPath in allLuaAsset)
+        {
+            index++;
+            EditorUtility.DisplayProgressBar("Set Asset AssetBundle Name", "AssetBundle Name Setting Progress", (index / allLuaAsset.Count));
+            AssetImporter importer = AssetImporter.GetAtPath(tempPath);
+            if (importer != null)
+            {
+                importer.assetBundleName = FilePathUtil.GetAssetBundleFileName(AssetType.Lua, "Lua");
+                AssetDatabase.ImportAsset(tempPath);
+            }
+        }
+        EditorUtility.ClearProgressBar();
+
+        //tips:Unity5.x Scripts not need to build AssetBundle
+        //analysiser.BuildAllScripts();
         BuildAssetBundle();
     }
 

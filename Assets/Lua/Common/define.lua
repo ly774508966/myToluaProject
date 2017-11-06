@@ -14,16 +14,16 @@ PanelNames = {
 
 --当前使用的协议类型--
 
-Util = LuaFramework.Util;
+util = Util;
 
-LuaHelper = LuaFramework.LuaHelper;
+luaHelper =LuaHelper;
 
 
-resMgr = LuaHelper.GetResManager();
+resMgr = luaHelper.GetResManager();
 --panelMgr = LuaHelper.GetPanelManager();
 --soundMgr = LuaHelper.GetSoundManager();
 --networkMgr = LuaHelper.GetNetManager();
-sceneMgr = LuaHelper.GetSceneManager();
+sceneMgr = luaHelper.GetSceneManager();
 
 WWW = UnityEngine.WWW;
 GameObject = UnityEngine.GameObject;
