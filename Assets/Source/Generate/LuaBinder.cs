@@ -15,13 +15,16 @@ public static class LuaBinder
 		UIGridWrap.Register(L);
 		UtilWrap.Register(L);
 		LuaHelperWrap.Register(L);
+		LuaBehaviourWrap.Register(L);
 		LuaManagerWrap.Register(L);
 		ResourceMgrWrap.Register(L);
+		SceneMgrWrap.Register(L);
 		UIRectWrap.Register(L);
 		UIWidgetWrap.Register(L);
 		UIWidgetContainerWrap.Register(L);
 		MonoSingletonMgr_LuaManagerWrap.Register(L);
 		SingletonManager_ResourceMgrWrap.Register(L);
+		MonoSingletonMgr_SceneMgrWrap.Register(L);
 		L.BeginModule("UnityEngine");
 		UnityEngine_ComponentWrap.Register(L);
 		UnityEngine_TransformWrap.Register(L);

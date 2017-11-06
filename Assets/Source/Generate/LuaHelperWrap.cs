@@ -8,6 +8,7 @@ public class LuaHelperWrap
 	{
 		L.BeginStaticLibs("LuaHelper");
 		L.RegFunction("GetType", GetType);
+		L.RegFunction("GetResManager", GetResManager);
 		L.RegFunction("Action", Action);
 		L.RegFunction("VoidDelegate", VoidDelegate);
 		L.RegFunction("OnCallLuaFunc", OnCallLuaFunc);
@@ -24,6 +25,22 @@ public class LuaHelperWrap
 			string arg0 = ToLua.CheckString(L, 1);
 			System.Type o = LuaHelper.GetType(arg0);
 			ToLua.Push(L, o);
+			return 1;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int GetResManager(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 0);
+			ResourceMgr o = LuaHelper.GetResManager();
+			ToLua.PushObject(L, o);
 			return 1;
 		}
 		catch (Exception e)

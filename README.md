@@ -25,4 +25,4 @@ progress:
 
 [myAssetBundleTools](https://github.com/HushengStudent/myAssetBundleTools)
 
-新增Lua代码打包。
+新增Lua代码打包。去掉Lua代码路径加载方式，全部改为从AssetBundle加载。

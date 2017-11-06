@@ -122,5 +122,13 @@ public class LuaManager : MonoSingletonMgr<LuaManager>
         lua = null;
         loader = null;
     }
+
+    void OnDestroy()
+    {
+        if (LuaManager.Instance != null)
+        {
+            LuaManager.Instance.Close();
+        }
+    }
 }
 

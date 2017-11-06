@@ -152,7 +152,7 @@ public static class CustomSettings
         //_GT(typeof(WrapGrid)),
         _GT(typeof(LuaHelper)),
         //_GT(typeof(ByteBuffer)),
-        //_GT(typeof(LuaBehaviour)),
+        _GT(typeof(LuaBehaviour)),
 
         //_GT(typeof(GameManager)),
         _GT(typeof(LuaManager)),
@@ -162,6 +162,7 @@ public static class CustomSettings
         //_GT(typeof(ThreadManager)),
         //_GT(typeof(NetworkManager)),
         _GT(typeof(ResourceMgr)),	
+        _GT(typeof(SceneMgr)),
     };
 
     public static List<Type> dynamicList = new List<Type>()
