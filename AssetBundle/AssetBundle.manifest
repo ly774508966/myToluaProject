@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 3832585037
+CRC: 2092249741
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -64,8 +64,8 @@ AssetBundleManifest:
       Dependencies:
         Dependency_0: shader.shader.assetbundle
     Info_17:
-      Name: font.fzy4jw.assetbundle
+      Name: lua.lua.assetbundle
       Dependencies: {}
     Info_18:
-      Name: lua.lua.assetbundle
+      Name: font.fzy4jw.assetbundle
       Dependencies: {}
