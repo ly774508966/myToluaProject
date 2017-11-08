@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3120216949
+CRC: 832302945
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 7964e0957034cf6e7357a5e460d65d24
+    Hash: e871e0921ff508ffc3d9369d0b269669
   TypeTreeHash:
     serializedVersion: 2
     Hash: 1033bf7ddfd4c6d43e7a6382c0a0a61a
@@ -17,6 +17,7 @@ Assets:
 - Assets/AssetBundleSrc/Lua/protobuf/listener.lua.bytes
 - Assets/AssetBundleSrc/Lua/Main.lua.bytes
 - Assets/AssetBundleSrc/Lua/Common/define.lua.bytes
+- Assets/AssetBundleSrc/Lua/3rd/luabitop/nsievebits.lua.bytes
 - Assets/AssetBundleSrc/Lua/protobuf/containers.lua.bytes
 - Assets/AssetBundleSrc/Lua/jit/dis_mips.lua.bytes
 - Assets/AssetBundleSrc/Lua/typeof.lua.bytes
@@ -31,8 +32,10 @@ Assets:
 - Assets/AssetBundleSrc/Lua/UnityEngine/Plane.lua.bytes
 - Assets/AssetBundleSrc/Lua/jit/dis_x64.lua.bytes
 - Assets/AssetBundleSrc/Lua/jit/dis_arm.lua.bytes
+- Assets/AssetBundleSrc/Lua/3rd/luabitop/bittest.lua.bytes
 - Assets/AssetBundleSrc/Lua/UnityEngine/RaycastHit.lua.bytes
 - Assets/AssetBundleSrc/Lua/GameStart.lua.bytes
+- Assets/AssetBundleSrc/Lua/3rd/luabitop/bitbench.lua.bytes
 - Assets/AssetBundleSrc/Lua/event.lua.bytes
 - Assets/AssetBundleSrc/Lua/socket/ftp.lua.bytes
 - Assets/AssetBundleSrc/Lua/jit/dis_arm64.lua.bytes
@@ -60,6 +63,7 @@ Assets:
 - Assets/AssetBundleSrc/Lua/cjson/util.lua.bytes
 - Assets/AssetBundleSrc/Lua/protobuf/protobuf.lua.bytes
 - Assets/AssetBundleSrc/Lua/UnityEngine/Vector4.lua.bytes
+- Assets/AssetBundleSrc/Lua/3rd/luabitop/installpath.lua.bytes
 - Assets/AssetBundleSrc/Lua/UnityEngine/Vector3.lua.bytes
 - Assets/AssetBundleSrc/Lua/jit/bc.lua.bytes
 - Assets/AssetBundleSrc/Lua/protobuf/descriptor.lua.bytes
@@ -83,5 +87,6 @@ Assets:
 - Assets/AssetBundleSrc/Lua/jit/bcsave.lua.bytes
 - Assets/AssetBundleSrc/Lua/3rd/cjson/lua2json.lua.bytes
 - Assets/AssetBundleSrc/Lua/jit/p.lua.bytes
+- Assets/AssetBundleSrc/Lua/3rd/luabitop/md5test.lua.bytes
 - Assets/AssetBundleSrc/Lua/3rd/pblua/person_pb.lua.bytes
 Dependencies: []
